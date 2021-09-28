@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/edfa3ly-master/static/css/main.7195adb9.chunk.css",
-    "main.js": "/edfa3ly-master/static/js/main.7b32d641.chunk.js",
-    "main.js.map": "/edfa3ly-master/static/js/main.7b32d641.chunk.js.map",
+    "main.css": "/edfa3ly-master/static/css/main.29727861.chunk.css",
+    "main.js": "/edfa3ly-master/static/js/main.0367b38d.chunk.js",
+    "main.js.map": "/edfa3ly-master/static/js/main.0367b38d.chunk.js.map",
     "runtime-main.js": "/edfa3ly-master/static/js/runtime-main.79ed1e3f.js",
     "runtime-main.js.map": "/edfa3ly-master/static/js/runtime-main.79ed1e3f.js.map",
     "static/css/2.249e743c.chunk.css": "/edfa3ly-master/static/css/2.249e743c.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.1b0095d5.chunk.js.map": "/edfa3ly-master/static/js/3.1b0095d5.chunk.js.map",
     "index.html": "/edfa3ly-master/index.html",
     "static/css/2.249e743c.chunk.css.map": "/edfa3ly-master/static/css/2.249e743c.chunk.css.map",
-    "static/css/main.7195adb9.chunk.css.map": "/edfa3ly-master/static/css/main.7195adb9.chunk.css.map",
+    "static/css/main.29727861.chunk.css.map": "/edfa3ly-master/static/css/main.29727861.chunk.css.map",
     "static/js/2.594544d3.chunk.js.LICENSE.txt": "/edfa3ly-master/static/js/2.594544d3.chunk.js.LICENSE.txt",
     "static/media/all.css": "/edfa3ly-master/static/media/fa-solid-900.eeccf4f6.woff"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.79ed1e3f.js",
     "static/css/2.249e743c.chunk.css",
     "static/js/2.594544d3.chunk.js",
-    "static/css/main.7195adb9.chunk.css",
-    "static/js/main.7b32d641.chunk.js"
+    "static/css/main.29727861.chunk.css",
+    "static/js/main.0367b38d.chunk.js"
   ]
 }
