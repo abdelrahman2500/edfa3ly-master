@@ -48,9 +48,9 @@ export default function ProductInfo(props) {
                             </p>
                             <p className="lead total">
                                 {/* <strong>Total price: </strong> */}
-                                {`${mount>=15 ? pro.price*15 : (mount * pro.price)} ${pro.currency}`}
+                                {`${mount>=15 ? pro.price*15 : mount<1 ? pro.price*1 : (mount * pro.price)} ${pro.currency}`}
                             </p>
-                            <button className="btn btn-primary" onClick={()=> mount>15? setMount(15): console.log(mount)}>Add to Cart</button>
+                            <button className="btn btn-primary" onClick={()=> mount>15? setMount(15): mount<1? setMount(1) : console.log(mount)}>Add to Cart</button>
                         </div>
                     </div>
                 </div>

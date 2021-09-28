@@ -1,7 +1,14 @@
 .pro-comp{
     .img-box{
+        overflow: hidden;
         img{
+            transition: .3s;
 
+        }
+        &:hover {
+            img{
+                transform: scale(1.2);
+            }
         }
     }
     .rating{

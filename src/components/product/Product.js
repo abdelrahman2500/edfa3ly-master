@@ -8,11 +8,11 @@ export default function Product({props}) {
     return (
         <div className="pro-comp text-center mb-3 p-3 bg-white shadow">
             <div className="img-box">
-                <img src={props.image} className="w-100" alt={props.name} />
+                
                 <Link to={{
                     pathname: `${process.env.PUBLIC_URL}/products/${props.id}`,
-                    
-                }} className="btn btn-outline-success col-6">Edit </Link>
+                    history: `${process.env.PUBLIC_URL}/products/${props.id}`
+                }} className=""><img src={props.image} className="w-100" alt={props.name} /> </Link>
             
             </div>
             <div className="pro-name my-2">
