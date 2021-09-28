@@ -24,7 +24,7 @@ export default function Categories() {
             <div className="row">
                 {categories.map(categ => 
                     <div key={categ.id} className="col-6 col-md-4 col-lg mb-2">
-                        <Link to="/edf3ly/products" onClick={()=> context.setFilterdProducts(context.products.filter((el) => el.categoryId == categ.id))}>
+                        <Link to="/edfa3ly-master/products/" onClick={()=> context.setFilterdProducts(context.products.filter((el) => el.categoryId == categ.id))}>
                             <div className="categ shadow position-relative">
                                 <div className="img-box">
                                     <img src={categ.image} className="w-100" alt={categ.name} />

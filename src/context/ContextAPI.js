@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react"
-import axios from '../axios'
+import axios from 'axios'
 
 // import productsData from "../data/products.json"
 
@@ -16,7 +16,7 @@ export function ContextProvider(props){
     // set products = all data
     useEffect(()=>{
         axios
-            .get("http://test-api.edfa3ly.io/product")
+            .get("https://test-api.edfa3ly.io/product")
             .then(res => {
                 const data = res.data
                 setProducts(data)
@@ -31,7 +31,7 @@ export function ContextProvider(props){
 
     // set categories = all categories
     useEffect(()=>{
-        fetch('http://test-api.edfa3ly.io/category')
+        fetch('https://test-api.edfa3ly.io/category')
             .then((response) => response.json())
             .then((res) => setCategs(res));
         // axios

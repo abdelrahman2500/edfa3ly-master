@@ -9,24 +9,21 @@ import Navbar from './components/navbar/Navbar';
 
 
 function App() {
-  // const context = useContext(Context)
-  // const[stars, setStars]= useState(Array(5))
-
-  // useEffect(()=> {
-  //   setStars(stars.fill("icon"))
-  // }, [stars])
 
   return (
     <Switch>
       <div className="App">
         <Navbar />
-        <Redirect exact from="/" to="/edf3ly" />
-        <Route path="/edf3ly" exact>
+        <Route path="/edfa3ly-master/" exact>
           <Home />
         </Route>
-        <Route path="/edf3ly/products" exact>
+        <Route path="/edfa3ly-master/products" exact>
           <Products />
         </Route>
+        <Route path="*">
+          <Home />
+        </Route>
+        <Redirect from="*" to="/edfa3ly-master/" />
       </div>
     </Switch>
   );
