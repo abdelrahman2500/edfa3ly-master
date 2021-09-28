@@ -1,0 +1,29 @@
+.categs{
+    background-color: #EEE;
+    border-radius: 5px;
+    .categ{
+        cursor: pointer;
+        border-radius: 5px;
+        overflow: hidden;
+        .img-box{
+
+        }
+        p{
+            position: absolute;
+            padding: 10px;
+            color: white;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+            background: #212529a3;
+            margin: 0;
+            font-weight: bold;
+            transition: .3s;
+        }
+        &:hover{
+            p{
+                padding-block: 12px;
+            }
+        }
+    }
+}
