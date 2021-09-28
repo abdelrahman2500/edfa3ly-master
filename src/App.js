@@ -1,11 +1,10 @@
-// import axios from "axios";
+
 import './App.css';
-// import { useContext, useEffect, useState } from 'react';
 import Products from './pages/products/Products';
 import { Switch, Route, Redirect } from 'react-router-dom';
-// import { Context } from './context/ContextAPI';
 import Home from './pages/home/Home';
 import Navbar from './components/navbar/Navbar';
+import ProductInfo from './pages/product/ProductInfo';
 
 
 function App() {
@@ -14,16 +13,14 @@ function App() {
     <Switch>
       <div className="App">
         <Navbar />
-        <Route path="/edfa3ly-master/" exact>
+        <Route path={process.env.PUBLIC_URL + "/"} exact>
           <Home />
         </Route>
-        <Route path="/edfa3ly-master/products" exact>
+        <Route path={process.env.PUBLIC_URL +"/products"} exact>
           <Products />
         </Route>
-        <Route path="*">
-          <Home />
-        </Route>
-        <Redirect from="*" to="/edfa3ly-master/" />
+        <Route component={ProductInfo} path={process.env.PUBLIC_URL +"/products/:id"} />
+        <Redirect from="/*" to={process.env.PUBLIC_URL + "/"} />
       </div>
     </Switch>
   );

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './index.scss'
+import { Link } from 'react-router-dom';
 
 export default function Product({props}) {
     const[stars, setStars]= useState(Array(5).fill("icon"))
@@ -8,6 +9,11 @@ export default function Product({props}) {
         <div className="pro-comp text-center mb-3 p-3 bg-white shadow">
             <div className="img-box">
                 <img src={props.image} className="w-100" alt={props.name} />
+                <Link to={{
+                    pathname: `${process.env.PUBLIC_URL}/products/${props.id}`,
+                    
+                }} className="btn btn-outline-success col-6">Edit </Link>
+            
             </div>
             <div className="pro-name my-2">
                 <h4 className=" m-0">{props.name}</h4>
