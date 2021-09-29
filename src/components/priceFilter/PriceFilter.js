@@ -34,7 +34,7 @@ export default function PriceFilter(props) {
 
     return (
         <div className="price-filter my-4 p-3">
-        
+        {handlePrice()}
         <h4>Rating</h4>
         <form>
             <div>
