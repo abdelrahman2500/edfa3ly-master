@@ -19,8 +19,10 @@ function App() {
         <Route path={process.env.PUBLIC_URL +"/products"} exact>
           <Products />
         </Route>
-        <Route component={ProductInfo} path={process.env.PUBLIC_URL +"/products/:id"} />
-        <Redirect from="/*" to={process.env.PUBLIC_URL + "/"} />
+        <Route component={ProductInfo} path={process.env.PUBLIC_URL +"/products/:id"} exact />
+        {/* <Redirect from="/products/:id/*" to={process.env.PUBLIC_URL + "/products/:id/"} exact />
+        <Redirect from="/products/*" to={process.env.PUBLIC_URL + "/products/"} exact />
+        <Redirect from="/*" to={process.env.PUBLIC_URL + "/"} exact/> */}
       </div>
     </Switch>
   );

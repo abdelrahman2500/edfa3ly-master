@@ -3,19 +3,22 @@ import { Context } from './../../context/ContextAPI';
 import './index.scss'
 
 export default function ProductInfo(props) {
-    console.log(props)
     const context = useContext(Context)
-    const[pro, setPro]= useState({})
+    const[pro, setPro]= useState(...context.products.filter(p => p.id == props.match.params.id))
     const[mount, setMount]= useState(1)
+    const[categ, setCateg]= useState(...context.categs.filter(c => c.id == pro.categoryId))
+    
 
-
+    {console.log(props)}
     useEffect(()=>{
         setPro(...context.products.filter(p => p.id == props.match.params.id))
+        setCateg(...context.categs.filter(c => c.id == pro.categoryId))
     },[])
     
 
     return (
         <div className="product-info">
+        {console.log(categ)}
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-4 col-lg-3 mb-2">
@@ -32,7 +35,10 @@ export default function ProductInfo(props) {
                                 <strong>Available colors: </strong>{pro.color}
                             </p>
                             <p className="lead">
-                                <strong>Release Date: </strong>{pro.releaseDate}
+                                <strong>Category: </strong>{categ.name}
+                            </p>
+                            <p className="lead">
+                                <strong>Release Date: </strong>{pro.releaseDate.slice(0,10)}
                             </p>
                             <p className="lead">
                                 <strong>Price: </strong>{`${pro.price} ${pro.currency}`}
