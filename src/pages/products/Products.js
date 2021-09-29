@@ -5,7 +5,6 @@ import Header from '../../components/header/Header';
 import Categories from './../../components/categories/Categories';
 import Product from '../../components/product/Product';
 import Filters from './../../components/filters/Filters';
-import { Link, NavLink } from 'react-router-dom';
 
 export default function Products() {
     const context = useContext(Context)
@@ -33,7 +32,7 @@ export default function Products() {
                 }
                 {/*  */}
                     <div className="productsAndFilters mb-4 p-3">
-                        {context.filterdProducts.length != products.length ?
+                        {context.filterdProducts.length !== products.length ?
                             <p>loading...</p>
                         :
                         <div className="row">
@@ -63,7 +62,7 @@ export default function Products() {
                                     <ul className="pagination justify-content-center py-0">
                                         {context.filterdProducts.map((el,i) => 
                                         i < Math.ceil(context.filterdProducts.length / proCount) ? 
-                                        <span className={i+1 == page ? "active": ""} onClick={()=>setPage(i+1)} key={el.id}>
+                                        <span className={i+1 === page ? "active": ""} onClick={()=>setPage(i+1)} key={el.id}>
                                             <li className="page-item" onClick={()=> gototop()}><span className="page-link">{i+1}</span></li>
                                         </span>
                                         : ""

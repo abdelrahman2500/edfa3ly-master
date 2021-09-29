@@ -4,15 +4,15 @@ import './index.scss'
 
 export default function ProductInfo(props) {
     const context = useContext(Context)
-    const[pro, setPro]= useState(...context.products.filter(p => p.id == props.match.params.id))
+    const[pro, setPro]= useState(...context.products.filter(p => p.id === props.match.params.id))
     const[mount, setMount]= useState(1)
-    const[categ, setCateg]= useState(...context.categs.filter(c => c.id == pro.categoryId))
+    const[categ, setCateg]= useState(...context.categs.filter(c => c.id === pro.categoryId))
     
 
     {console.log(props)}
     useEffect(()=>{
-        setPro(...context.products.filter(p => p.id == props.match.params.id))
-        setCateg(...context.categs.filter(c => c.id == pro.categoryId))
+        setPro(...context.products.filter(p => p.id === props.match.params.id))
+        setCateg(...context.categs.filter(c => c.id === pro.categoryId))
     },[])
     
 

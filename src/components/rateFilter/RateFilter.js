@@ -22,7 +22,7 @@ export default function RateFilter(props) {
 
     return (
         <div className="rate-filter my-4 p-3">
-            <h4>Rating : {rate == 0 ? "all" : rate + " Stars"}</h4>
+            <h4>Rating : {rate === 0 ? "all" : rate + " Stars"}</h4>
             {showStars(5)}
             {showStars(4)}
             {showStars(3)}

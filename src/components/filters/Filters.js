@@ -19,16 +19,16 @@ export default function Filters() {
             console.log("1")
             context.setFilterdProducts(context.products.filter(pro => {
                 return(
-                    pro.rating == rate && (pro.price >= start && pro.price <= end)
+                    pro.rating === rate && (pro.price >= start && pro.price <= end)
                 ) 
             }))
-        } else if(start ==false && rate == false){
+        } else if(start ===false && rate === false){
             console.log("2")
         } else {
             if( rate){
                 console.log("3")
                 context.setFilterdProducts(context.products.filter(pro => {
-                    return pro.rating == rate
+                    return pro.rating === rate
                 }))
             } else {
                 console.log("4")
