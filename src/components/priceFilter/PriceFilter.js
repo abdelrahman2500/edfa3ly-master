@@ -7,18 +7,18 @@ export default function PriceFilter(props) {
     const context = useContext(Context)
 
     const[pricesArr, setPricesArr] = useState([])
+    const[start, setStart] = useState(Math.min(...pricesArr))
+    const[end, setEnd] = useState(Math.max(...pricesArr))
 
     
     useEffect(()=> {
-        setPricesArr([])
+        // setPricesArr([])
         context.filterdProducts.map(el => 
             setPricesArr(pricesArr.push(el.price))    
             )
             setPricesArr(pricesArr)
-        },[context.setFilterdProducts])
+    },[context.setFilterdProducts])
         
-    const[start, setStart] = useState(0)
-    const[end, setEnd] = useState(0)
     
     
     useEffect(()=>{

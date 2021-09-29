@@ -33,16 +33,15 @@ export default function Products() {
                 }
                 {/*  */}
                     <div className="productsAndFilters mb-4 p-3">
+                        {context.filterdProducts.length != products.length ?
+                            <p>loading...</p>
+                        :
                         <div className="row">
                             {/* filters */}
                             <div className="col-12 col-md-4">
                                 <Filters />
                             </div>
-
                             {/* products */}
-                        {context.filterdProducts.length != products.length ?
-                            <p>loading...</p>
-                        :
                             <div className="col-12 col-md-8 bg-light p-3">
                                 <div className="page-num d-flex justify-content-end mb-2">
                                     <span className="badge bg-dark">
@@ -64,7 +63,7 @@ export default function Products() {
                                     <ul className="pagination justify-content-center py-0">
                                         {context.filterdProducts.map((el,i) => 
                                         i < Math.ceil(context.filterdProducts.length / proCount) ? 
-                                        <span onClick={()=>setPage(i+1)} key={el.id}>
+                                        <span className={i+1 == page ? "active": ""} onClick={()=>setPage(i+1)} key={el.id}>
                                             <li className="page-item" onClick={()=> gototop()}><span className="page-link">{i+1}</span></li>
                                         </span>
                                         : ""
@@ -72,8 +71,8 @@ export default function Products() {
                                     </ul>
                                 </nav>
                             </div>
-                        }
                     </div>
+                        }
                 </div>
             </div>
         </div>

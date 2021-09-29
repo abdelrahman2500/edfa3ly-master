@@ -3,15 +3,17 @@
     .productsAndFilters{
         nav{ 
             ul{
-                a{
+                span{
                     text-decoration: none;
                     border-radius: 5px;
+                    cursor: pointer;
+                    transition: .3s;
                     li{
                         span{
                             text-decoration: none;
                         }
                     }
-                    &.active{
+                    &.active,:hover{
                         background-color: #18A2D3;
                         color: #FFF;
                         li{
