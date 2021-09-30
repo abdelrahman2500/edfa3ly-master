@@ -32,9 +32,9 @@ export default function Navbar() {
                                 aria-label="Search" 
                                 value={searchValue}
                                 onChange={(e)=>setSearchValue(e.target.value)}/>
-                            <Link to={searchValue.trim() === "" ? false : process.env.PUBLIC_URL + '/products/'} onClick={() => context.setFilterdProducts(context.products.filter(el=> 
-                                el.name.toLowerCase().indexOf(searchValue.trim().toLowerCase()) !== -1
-                                || el.color.toLowerCase().indexOf(searchValue.trim().toLowerCase()) !== -1
+                            <Link to={searchValue.trim() == "" ? false : process.env.PUBLIC_URL + '/products/'} onClick={() => context.setFilterdProducts(context.products.filter(el=> 
+                                el.name.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
+                                || el.color.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
                                 ))}>
                                     <button className="btn btn-outline-success" type="button">Search</button>
                             </Link>

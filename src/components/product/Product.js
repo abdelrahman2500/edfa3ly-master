@@ -6,7 +6,7 @@ export default function Product({props}) {
     const[stars, setStars]= useState(Array(5).fill("icon"))
 
     return (
-        <div className="pro-comp text-center mb-3 p-3 bg-white shadow">
+        <div style={{borderRightColor : props.color}} className="pro-comp text-center mb-3 p-3 bg-white shadow">
             <div className="img-box">
                 <Link to={{
                     pathname: `${process.env.PUBLIC_URL}/products/${props.id}`

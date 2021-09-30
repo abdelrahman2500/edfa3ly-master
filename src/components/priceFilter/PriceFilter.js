@@ -13,13 +13,11 @@ export default function PriceFilter(props) {
     
     useEffect(()=> {
         // setPricesArr([])
-        context.filterdProducts.map(el => 
+        context.products.map(el => 
             setPricesArr(pricesArr.push(el.price))    
-            )
-            setPricesArr(pricesArr)
+        )
+        setPricesArr(pricesArr)
     },[context.setFilterdProducts])
-        
-    
     
     useEffect(()=>{
         setStart(Math.min(...pricesArr))
@@ -33,7 +31,7 @@ export default function PriceFilter(props) {
     }
 
     return (
-        <div className="price-filter my-4 p-3">
+        <div className="price-filter my-4">
         {handlePrice()}
         <h4>Rating</h4>
         <form>

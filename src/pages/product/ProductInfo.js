@@ -4,15 +4,15 @@ import './index.scss'
 
 export default function ProductInfo(props) {
     const context = useContext(Context)
-    const[pro, setPro]= useState(...context.products.filter(p => p.id === props.match.params.id))
+    const[pro, setPro]= useState(...context.products.filter(p => p.id == props.match.params.id))
     const[mount, setMount]= useState(1)
-    const[categ, setCateg]= useState(...context.categs.filter(c => c.id === pro.categoryId))
+    const[categ, setCateg]= useState(...context.categs.filter(c => c.id == pro.categoryId))
     
 
     {console.log(props)}
     useEffect(()=>{
-        setPro(...context.products.filter(p => p.id === props.match.params.id))
-        setCateg(...context.categs.filter(c => c.id === pro.categoryId))
+        setPro(...context.products.filter(p => p.id == props.match.params.id))
+        setCateg(...context.categs.filter(c => c.id == pro.categoryId))
     },[])
     
 
@@ -22,17 +22,17 @@ export default function ProductInfo(props) {
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-4 col-lg-3 mb-2">
-                        <div className="img-box p-2 border">
+                        <div style={{backgroundColor: pro.color}} className="img-box p-2 border">
                             <img src={pro.image} className="w-100" alt={pro.name} />
                         </div>
                     </div>
                     <div className="col-12 col-md-8 col-lg-6 mb-2">
-                        <div style={{borderColor: pro.color}} className="details p-2">
+                        <div style={{borderRightColor: pro.color}} className="details p-2">
                             <p className="lead">
                                 <strong>Name: </strong>{pro.name}
                             </p>
                             <p className="lead">
-                                <strong>Available colors: </strong>{pro.color}
+                                <strong>Available colors: </strong>{pro.color} <i className="fas fa-arrow-right"></i>
                             </p>
                             <p className="lead">
                                 <strong>Category: </strong>{categ.name}

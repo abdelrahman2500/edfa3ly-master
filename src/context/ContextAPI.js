@@ -26,7 +26,7 @@ export function ContextProvider(props){
 
     // set filterd porducts = to products to show them in products page
     useEffect(()=> {
-        setFilterdProducts(filterdProducts.length === 0 ? products : filterdProducts)
+        setFilterdProducts(filterdProducts.length == 0 ? products : filterdProducts)
     },[setFilterdProducts])
 
     // set categories = all categories
