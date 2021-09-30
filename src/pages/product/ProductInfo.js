@@ -8,8 +8,6 @@ export default function ProductInfo(props) {
     const[mount, setMount]= useState(1)
     const[categ, setCateg]= useState(...context.categs.filter(c => c.id == pro.categoryId))
     
-
-    {console.log(props)}
     useEffect(()=>{
         setPro(...context.products.filter(p => p.id == props.match.params.id))
         setCateg(...context.categs.filter(c => c.id == pro.categoryId))
@@ -17,8 +15,7 @@ export default function ProductInfo(props) {
     
 
     return (
-        <div className="product-info">
-        {console.log(categ)}
+        <div className="product-info bg-light h-100">
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-4 col-lg-3 mb-2">
