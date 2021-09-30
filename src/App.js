@@ -17,12 +17,8 @@ function App() {
         <ContextProvider>
             <div className="App">
               <Navbar />
-              <Route path={process.env.PUBLIC_URL + "/"} exact>
-                <Home />
-              </Route>
-              <Route path={process.env.PUBLIC_URL +"/products"} exact>
-                <Products />
-              </Route>
+              <Route component={Home} path={process.env.PUBLIC_URL + "/"} exact/>
+              <Route component={Products} path={process.env.PUBLIC_URL +"/products"} exact />
               <Route component={ProductInfo} path={process.env.PUBLIC_URL +"/products/:id"} exact />
             </div>
         </ContextProvider>

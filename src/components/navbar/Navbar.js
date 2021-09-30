@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink , useHistory} from 'react-router-dom'
 import { Context } from './../../context/ContextAPI';
 
 export default function Navbar() {
     const context = useContext(Context)
     const[searchValue,setSearchValue] = useState('')
-
+    let history = useHistory().location.pathname
     return (
         <div className="navbar p-0 mb-4">
             <nav className="navbar w-100 navbar-expand-lg navbar-dark bg-dark">
@@ -32,7 +32,7 @@ export default function Navbar() {
                                 aria-label="Search" 
                                 value={searchValue}
                                 onChange={(e)=>setSearchValue(e.target.value)}/>
-                            <Link to={searchValue.trim() == "" ? false : process.env.PUBLIC_URL + '/products/'} onClick={() => context.setFilterdProducts(context.products.filter(el=> 
+                            <Link to={ searchValue.trim() == "" ? history : process.env.PUBLIC_URL + '/products/'} onClick={() => searchValue.trim() == "" ? "" : context.setFilterdProducts(context.products.filter(el=> 
                                 el.name.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
                                 || el.color.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1
                                 ))}>
