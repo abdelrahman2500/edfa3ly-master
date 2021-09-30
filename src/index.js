@@ -7,16 +7,10 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap";
 import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 import "../node_modules/@fortawesome/fontawesome-free/js/all";
-import { ContextProvider } from './context/ContextAPI';
-import {BrowserRouter as Router} from "react-router-dom"
 
 ReactDOM.render(
   <React.StrictMode>
-    <ContextProvider>
-      <Router>
-        <App />
-      </Router>
-    </ContextProvider>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
