@@ -49,7 +49,7 @@ export default function ProductInfo(props) {
                         <div className="add-to-cart p-2 border text-center">
                             <h4 className="">Add to cart</h4>
                             <p className="lead">
-                                <strong>Mount: </strong>
+                                <strong>Amount: </strong>
                                 <input type="number" min="1" max="15" value={mount} onChange={(e)=> setMount(e.target.value)} />
                             </p>
                             <p className="lead total">
