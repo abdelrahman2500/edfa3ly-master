@@ -4,25 +4,22 @@ import './index.scss'
 
 export default function ProductInfo(props) {
     const context = useContext(Context)
-    const[pro, setPro]= useState({})
-    const[p, setp]= useState([])
-    const[c, setc]= useState([])
+    const[pro, setPro]= useState(...context.products.filter(p => p.id == props.match.params.id))
+    // const[p, setp]= useState([])
+    // const[c, setc]= useState([])
     const[mount, setMount]= useState(1)
     const[categ, setCateg]= useState()
     
     useEffect(()=>{
-        setp(context.products)
-        setc(context.categs)
+        // setp(context.products)
+        // setc(context.categs)
         setPro(...context.products.filter(p => p.id == props.match.params.id))
         setCateg(...context.categs.filter(c => c.id == pro.categoryId))
     },[context.products, context.categs])
     
-
     return (
         <div className="product-info bg-light h-100">
                 {pro && categ ? 
-                
-                
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-4 col-lg-3 mb-2">
