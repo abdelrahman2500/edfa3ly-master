@@ -9,7 +9,7 @@ export default function Product({props}) {
         <div style={{borderRightColor : props.color}} className="pro-comp text-center mb-3 p-3 bg-white shadow">
             <div className="img-box">
                 <Link to={{
-                    pathname: `${process.env.PUBLIC_URL}/products/${props.id}`
+                    pathname: `/edfa3ly-master/products/${props.id}`
                 }} className=""><img src={props.image} className="w-100" alt={props.name} /> </Link>
             
             </div>
