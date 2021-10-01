@@ -20,7 +20,7 @@ export default function ColorFilter(props) {
     
     return (
         <div>
-        <div className={colors.length < 1 ? "bg-dark" : "d-none"}>
+        <div className={colors.length < 1 ? "" : "d-none"}>
                 <span className="badge border p-2 m-1 invisible">{" "}</span>
         </div>
             <div className={colors.length >= 1 ? "bg-dark" : "invisible"}>
