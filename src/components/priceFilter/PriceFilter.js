@@ -29,10 +29,10 @@ export default function PriceFilter(props) {
         props.setE(end)
         // context.setFilterdProducts(context.products.filter(pro => pro.price <= end && pro.price >= start))
     }
+    handlePrice()
 
     return (
         <div className="price-filter my-4">
-        {handlePrice()}
         <h4>Rating</h4>
         <form>
             <div>

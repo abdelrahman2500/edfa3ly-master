@@ -8,7 +8,6 @@ export default function ColorFilter(props) {
     const [colorsSet, setColorsSet] = useState(new Set())
     const [colorsArr, setColorsArr] = useState([])
     const [colors, setColors] = useState([])
-    const [visible, setVisible] = useState("invisible")
 
     useEffect(()=> {
         context.products.map(p => setColorsSet(colorsSet.add(p.color)))
@@ -18,18 +17,18 @@ export default function ColorFilter(props) {
         setColors(colors)
     },[setColors])
     
+    props.setC(colors)
     return (
         <div>
         <div className={colors.length < 1 ? "" : "d-none"}>
                 <span className="badge border p-2 m-1 invisible">{" "}</span>
         </div>
-            <div className={colors.length >= 1 ? "bg-dark" : "invisible"}>
+            <div className={colors.length >= 1 ? "bg-dark" : "d-none"}>
                 {colors.map((color,i) => 
                     <span className="badge border p-2 m-1" key={i} style={{backgroundColor: color}}>{" "}</span>
                 )}
             </div>
             <div className="colors-filter border border-2 my-3 p-3">
-            {props.setC(colors)}
 
             {colorsArr.map((c, i) => 
                 <div className="form-check" key={i}>
